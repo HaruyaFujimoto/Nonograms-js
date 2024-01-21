@@ -1,0 +1,17 @@
+{
+  "name": "oekaki_logic_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild ./src/index.js --bundle --outdir=dist",
+    "serve": "esbuild ./src/index.js --bundle --outdir=dist --watch --servedir=dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.19.11"
+  }
+}
