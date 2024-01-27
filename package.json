@@ -2,6 +2,7 @@
   "name": "oekaki_logic_js",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "jest",
