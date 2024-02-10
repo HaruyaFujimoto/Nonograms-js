@@ -7,8 +7,13 @@ export class Grid {
     this.horizontalNumbersString = horizontalNumbersString;
   }
 
-  parse(numbersString,) {
-    rows = numbersString.strip().split('\n');
-    return rows.map((row) => row.strip().split('\s'));
+  parse(numbersString) {
+    const rows = numbersString.trim().split('\n');
+    return rows.map(
+      (row) => row.trim().split(/\s+/)
+      .map(
+        (item) => parseInt(item)
+      )
+    );
   }
 }
