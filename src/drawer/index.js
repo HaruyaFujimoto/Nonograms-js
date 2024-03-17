@@ -14,8 +14,15 @@ const BOX_SIZE = 20;
 const LINE_WIDTH = 2;
 const BOLD_LINE_WIDTH = LINE_WIDTH * 2;
 
-const LINE_COLOR = 0x888888;
-const BOLD_LINE_COLOR = 0x333333;
+const COLORS = {
+  WHITE: 0xffffff,
+  WHITE_GRAY: 0x888888,
+  DARK_GRAY: 0x333333,
+  BLACK: 0x222222,
+}
+
+const LINE_COLOR = COLORS.WHITE_GRAY;
+const BOLD_LINE_COLOR = COLORS.DARK_GRAY;
 
 function drawBoxes(graphics, squares) {
   function generateBox(graphics, xIndex, yIndex, value) {
@@ -25,11 +32,11 @@ function drawBoxes(graphics, squares) {
     const fillColor = ((value) => {
       switch (value) {
         case 0:
-          return 0xffffff;
+          return COLORS.WHITE;
         case 1:
-          return 0x222222;
+          return COLORS.BLACK;
         case 2:
-          return 0xffffff;
+          return COLORS.WHITE;
       }
     })(value);
     graphics.beginFill(fillColor);
