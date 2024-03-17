@@ -13,9 +13,7 @@ describe('model Grid', () => {
   test('method parse()', () => {
     const grid = createGrid();
     const result = grid.parse('1 2 3');
-    const expected = [
-      [1, 2, 3]
-    ];
+    const expected = [[1, 2, 3]];
     expect(result).toEqual(expected);
-  })
+  });
 });

@@ -1,5 +1,4 @@
 export class Grid {
-
   constructor(x, y, verticalNumbersString, horizontalNumbersString) {
     this.x = x;
     this.y = y;
@@ -9,11 +8,11 @@ export class Grid {
 
   parse(numbersString) {
     const rows = numbersString.trim().split('\n');
-    return rows.map(
-      (row) => row.trim().split(/\s+/)
-      .map(
-        (item) => parseInt(item)
-      )
+    return rows.map((row) =>
+      row
+        .trim()
+        .split(/\s+/)
+        .map((item) => parseInt(item)),
     );
   }
 }
