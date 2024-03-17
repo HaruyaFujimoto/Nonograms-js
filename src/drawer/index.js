@@ -5,6 +5,7 @@ const options = {
   resizeTo: window,
 };
 
+// pixi.js のアプリケーションクラスをインスタンス化
 export const app = new Application(options);
 
 // graphic options
@@ -24,7 +25,9 @@ const COLORS = {
 const LINE_COLOR = COLORS.WHITE_GRAY;
 const BOLD_LINE_COLOR = COLORS.DARK_GRAY;
 
+// 表組みのマスの群を描画
 function drawBoxes(graphics, squares) {
+  // 個々の1マスを描画
   function generateBox(graphics, xIndex, yIndex, value) {
     // const _graphics = new Graphics(); // IDE の補助によるメソッド確認用
     graphics.lineStyle(LINE_WIDTH, LINE_COLOR, 1);
@@ -60,6 +63,7 @@ function drawBoxes(graphics, squares) {
   });
 }
 
+// 罫線を描画
 function drawBoldLines(graphics, squares) {
   // const graphics = new Graphics();
   graphics.lineStyle(BOLD_LINE_WIDTH, BOLD_LINE_COLOR, 1);
@@ -93,14 +97,17 @@ function drawBoldLines(graphics, squares) {
   });
 }
 
+// 描画に使用するインスタンス
 const graphics = new Graphics();
 
+// インスタンスをアプリケーションクラスに登録
 app.stage.addChild(graphics);
 
 export const generateSquares = (x = 1, y = 1) => {
   return Array(y).fill(Array(x).fill(0));
 };
 
+// 全ての描画を行う関数
 export const draw = (squares) => {
   graphics.clear();
   drawBoxes(graphics, squares);
