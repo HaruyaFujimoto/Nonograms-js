@@ -97,6 +97,16 @@ function drawBoldLines(graphics, squares) {
   });
 }
 
+// 
+function drawNumbers() {
+  function drawVerticalNumbers() {
+
+  }
+  function drawHorizontalNumbers() {
+
+  }
+}
+
 // 描画に使用するインスタンス
 const graphics = new Graphics();
 
@@ -110,6 +120,6 @@ export const generateSquares = (x = 1, y = 1) => {
 // 全ての描画を行う関数
 export const draw = (squares) => {
   graphics.clear();
-  drawBoxes(graphics, squares);
-  drawBoldLines(graphics, squares);
+  // drawBoxes(graphics, squares);
+  // drawBoldLines(graphics, squares);
 };

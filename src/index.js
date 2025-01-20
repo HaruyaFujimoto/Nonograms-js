@@ -1,4 +1,5 @@
 import { app, draw, generateSquares } from './drawer';
+import { Grid } from './models/grid';
 
 document.body.appendChild(app.view);
 
@@ -7,6 +8,7 @@ function main(x = 25, y = 15, verticalNumbersString, horizontalNumbersString) {
   const randomSquare = squares.map((row) =>
     row.map((_) => Math.floor(Math.random() * 3)),
   );
+  const grid = new Grid(x, y, verticalNumbersString, horizontalNumbersString);
   draw(randomSquare);
 }
 
